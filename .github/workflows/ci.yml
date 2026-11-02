@@ -1,0 +1,27 @@
+name: Peripheral verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  peripherals:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: Install simulator
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq iverilog
+      - name: Audit public files and history
+        run: python scripts/audit_release.py
+      - name: Run independent peripheral tests
+        run: python -B scripts/run_tests.py

@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "release": "OV5640 peripherals v1",
+  "files": {
+    ".gitattributes": {
+      "sha256": "1cb80036b75dff8b9150e0469c2b6548674a300089f900b7a27e0e01266e66f9"
+    },
+    ".github/workflows/ci.yml": {
+      "sha256": "8f3df9f38f1ea6a642bc4b5163e007be2b0d60bd60c3388b5b03534a44bbcde6"
+    },
+    ".gitignore": {
+      "sha256": "bf895ffec0ed758cb2df298897497951a5d6919f8c17baa94cfafa9bafca47f9"
+    },
+    "docs/core-interface.md": {
+      "sha256": "7083b5feb5b3d2b0ba4feeb8660c15b97ba86032fc1a6cdc381fd2150c350dd5"
+    },
+    "docs/validation.md": {
+      "sha256": "98abbbe4c319d8544604488280c4e39afaaf100ca09193b8c318845a7bd60447"
+    },
+    "docs/wiring.md": {
+      "sha256": "eac648151c9689ce3b82109c39fca1a84491a00f54cd0c4966edc92780dd37af"
+    },
+    "README.md": {
+      "sha256": "1d57224bdf04ede71a1bfe2a279b9ca833d2c50e76c21ff4aca8284d3f8fc794"
+    },
+    "scripts/audit_release.py": {
+      "sha256": "6021471cea02c99e1cfaf3b60f69f482ad3146835b5f29f1ecf65eda4478fd87"
+    },
+    "scripts/generate_fixtures.py": {
+      "sha256": "bc10fb8c5bfbf704d1efde818ce4d74e1b0a083709759fd88c552a0e80283682"
+    },
+    "scripts/run_tests.py": {
+      "sha256": "d1c95de2c43118fc57c1e6ae3048a9410f94ed47376e9adbe39f4a87d4b27fe8"
+    },
+    "sim/inference_core_interface_stub.sv": {
+      "sha256": "aa7aa5b00f84945808133e1f92769574c2c61f7991a09ca5a2a2359de5cb3a5f"
+    },
+    "sim/ov5640_sccb_model.sv": {
+      "sha256": "641ab7ae7a2294f6df33d55146595f908cb78a0ad7cf3fdca6c08def9234752e"
+    },
+    "sim/tb_async_event_fifo.sv": {
+      "sha256": "b310b84308d91302204abe213cb2ac958eceb1654b410f3ae3741fcaac14ab09"
+    },
+    "sim/tb_camera_frame_prefetch.sv": {
+      "sha256": "10b32a702527390d1277f11a74b107199416879040fa6584c7665e44c887122b"
+    },
+    "sim/tb_ov5640_capture.sv": {
+      "sha256": "5fb31631816db267e088cab3cad7ef4da5d3de5e8005858d7d14ecf9a27a3bc7"
+    },
+    "sim/tb_ov5640_configured_dvp.sv": {
+      "sha256": "45bb847197f07a6869c309e9d215178194e4a9b65c4b1242c5ffe2b74ada78a6"
+    },
+    "sim/tb_ov5640_init.sv": {
+      "sha256": "09f4c32ff9ac8154acba2a2a6c5a1b01a88108e140ef177972393881a494849e"
+    },
+    "sim/tb_public_controls.sv": {
+      "sha256": "efb04cc1fa686c5c0760bfe4647dfff7e7ce76c9a33c4e215de94d9e2ee58205"
+    },
+    "sim/tb_public_formatter.sv": {
+      "sha256": "67a93828ad5874fb7a010d25d02b8a9635d6527cc39ae6c3c65de493dcb6fa0a"
+    },
+    "sim/tb_public_loader.sv": {
+      "sha256": "1a69f6383e2ee3ea9712c1d506edb86293518ca6cd8c5ef1f67958cf7bdc33d1"
+    },
+    "sim/tb_public_pipeline.sv": {
+      "sha256": "04170554093c1e7bab772080fd7cc0c326bece07256d32b75b40d70917fd6dbb"
+    },
+    "sim/tb_public_publication.sv": {
+      "sha256": "f79c0646bf8e2148b574403b8bb67139b5e630734bf9da0391f4f504c34ca7a2"
+    },
+    "sim/tb_public_roi.sv": {
+      "sha256": "f325e0f1f233bd84ce67b81ca83fd41649eb1794e9d9726062ec12edc4181afc"
+    },
+    "src/assets/confidence/confidence_exp.mem": {
+      "sha256": "78b1e462cfa6d6326cac03534cb1ccc8f65b1e99e614a0c04d1f149dc5f5646f"
+    },
+    "src/assets/photo_dashboard/c1_static_map.mem": {
+      "sha256": "5cc872c0b509b865e75a8350f1f85755ecdf7b033468318718c2b146ad16b942"
+    },
+    "src/assets/photo_dashboard/c1_static_masks.mem": {
+      "sha256": "2afc69940d4d81bf0b05778affc2af3870581990f25554381133e4621200a442"
+    },
+    "src/assets/photo_dashboard/class_aa.mem": {
+      "sha256": "9b48e87a44833ac3993a34e6ed14ec7f93619e392615f79b22fe3a5d881a82c1"
+    },
+    "src/assets/photo_dashboard/glyph_rows.mem": {
+      "sha256": "4150c48e749fb7c1c615e17b630e05c3c09564304589deb2f57bc701e1ad7c0a"
+    },
+    "src/assets/photo_dashboard/percent_aa.mem": {
+      "sha256": "874c10cac9d20a1c6ba4e47e89c0c504ffdec0982f5299c528fa0e07919a61fa"
+    },
+    "src/constraints/ov5640_photo.xdc": {
+      "sha256": "5816f5a597125663fd46c52599e818a6949a956af68797b2ae3d05aede51609f"
+    },
+    "src/rtl/aa_palette.vh": {
+      "sha256": "53ac7ee1264406c65e7042f2fe673b678279a7866c61acc301956367fd564b14"
+    },
+    "src/rtl/async_event_fifo.v": {
+      "sha256": "6d70455a3937da10b070d74675719772c453d6919a68e31327f0bf4f86ea8a09"
+    },
+    "src/rtl/board_clock50.v": {
+      "sha256": "78b2d854833554d6e2f415862b358134e5acf091ade7fb5f79a2a7aa7b7b2316"
+    },
+    "src/rtl/c1_dashboard_osd.v": {
+      "sha256": "fdd49f3e67b418b87106c7266ce2403255b6a03199e3c4083bf9ac61213b8a21"
+    },
+    "src/rtl/c1_static_style.vh": {
+      "sha256": "db99c51244a0ee7943ac497680544712cce5a0da09716718a6055c5fc23e66be"
+    },
+    "src/rtl/camera_clock24.v": {
+      "sha256": "62b8e92985f0d6cdc6485af452a591d56e0431a8c833c7aa6a2b8eb600d711ac"
+    },
+    "src/rtl/camera_frame_prefetch.v": {
+      "sha256": "4d1f770b7c6f1dc834c4e0eae33c25edf333ebcadd12aeedad4487ce79be8e0a"
+    },
+    "src/rtl/dashboard_metrics.v": {
+      "sha256": "3a41ffb453321a537f1ec9b28823646f61dbb736e033ec0dc2a12596218082ac"
+    },
+    "src/rtl/dashboard_timing.v": {
+      "sha256": "08b06029b2855d79c8fd388196901a1d503928688b577b9c2fdffd593db86895"
+    },
+    "src/rtl/dvp_rgb565_rx.v": {
+      "sha256": "b3b824c3179be924152a9c551d73631afe78f0adaaa4f6197061cc6795ac200f"
+    },
+    "src/rtl/frame_buffer_cdc.v": {
+      "sha256": "34dc32a0e603322efe3001004bb1d0474422874d6b55946c69f9739ae75256e8"
+    },
+    "src/rtl/gray_frame_loader.v": {
+      "sha256": "96b3b9927ab9658f6f62fa59e6e79a85ddef0027597b6f32fce5d679a452b9e0"
+    },
+    "src/rtl/inference_debug_uart.v": {
+      "sha256": "112c8a728124df9a3d9dbbb0e7eb36cc22dddf3e35c439ab6bd282f060ece5fa"
+    },
+    "src/rtl/ov5640_capture.v": {
+      "sha256": "3a2d8d1e26baf1758de2e67a740fb3f3618f374176db8c20ae24e317c6b4f546"
+    },
+    "src/rtl/ov5640_init.v": {
+      "sha256": "b028591ddd920b6687312087809a18b5fead175d9b87731b9a95c6dc5e1df316"
+    },
+    "src/rtl/ov5640_photo_top.v": {
+      "sha256": "a333124e54d432b0e998cc0c3abd5495bc2c3abd67fe43bc2237569c3a2a97f0"
+    },
+    "src/rtl/ov5640_registers.vh": {
+      "sha256": "27b6d480c0021651166770977126611a9d93d758d6bd49436a2dd854156a6b85"
+    },
+    "src/rtl/packed_bram.v": {
+      "sha256": "516b50ef5d00e482c4cb7377fc1f664c9f0b819a3edf1a08579c4a4924e977f7"
+    },
+    "src/rtl/photo_controls.v": {
+      "sha256": "365403d8ead779fd9af96ca201c450c55747a39e7908c1e824bfd2967412541c"
+    },
+    "src/rtl/photo_dashboard_glyphs.vh": {
+      "sha256": "b618f239320ff9e2bc59b94c6f46aefe4f0cad0b1c1d5e8d987732e0a42ad5ae"
+    },
+    "src/rtl/photo_formatter.v": {
+      "sha256": "42b779274b76df58c450bdc6a3a050b3925cc6e53fde93cc529387d9afa11a64"
+    },
+    "src/rtl/photo_overlap_pipeline.v": {
+      "sha256": "e2b51970f0c5cd45e1507cb5a012b04a1c75caba3c5b425bdbdab4623f064347"
+    },
+    "src/rtl/photo_stream_consumer.v": {
+      "sha256": "950f8fe4a708724234b90e7fcbe8119b394432426c9fc473cbe60374bbda6e86"
+    },
+    "src/rtl/photo_stream_pipeline.v": {
+      "sha256": "356778fe307f73f3db455ffeab97ea2dde48dd4428ca904df99d8e7e1932dd30"
+    },
+    "src/rtl/reset_sync.v": {
+      "sha256": "5853077e1c79a25b90abb88c3926462119de4e1eb6e7fd64466f0d331602d2a4"
+    },
+    "src/rtl/roi_gray48.v": {
+      "sha256": "0e8a65049a73cf4048c67c620750c66e0a0815115efa5ac662076e8bc13e70b5"
+    },
+    "src/rtl/sccb16_master.v": {
+      "sha256": "f1646647388b72d07b3fb451aa0857ba24db4e6a3b17ae30c78eea4a6b38833d"
+    },
+    "src/rtl/uart_tx.v": {
+      "sha256": "7063caffc6897d911c18bd6bc9c2243b5555050acc3805e38cb8e1b04939054c"
+    },
+    "src/third_party/rgb2dvi/ClockGen.vhd": {
+      "sha256": "911088c9f4cf5897443a13bdbeaef4a0b3cf8157745582d68b556482e642765b"
+    },
+    "src/third_party/rgb2dvi/DVI_Constants.vhd": {
+      "sha256": "d8dbbbc3c8696d4527ee0d3c4757f1a40d0acebc845899483bc61c2bb8270cde"
+    },
+    "src/third_party/rgb2dvi/OutputSERDES.vhd": {
+      "sha256": "6205d58405919d4f899a525256e2cafa725408f6644642755cd0de63e69b286e"
+    },
+    "src/third_party/rgb2dvi/rgb2dvi.vhd": {
+      "sha256": "e3f24df794677dcef79628051686677eff6ca86612285635b79c0c6fe1dc49bf"
+    },
+    "src/third_party/rgb2dvi/rgb2dvi.xdc": {
+      "sha256": "51b9ac7f1229a2250cddb1d490e45e536dd836eb5c42851f67359c7a5aef6130"
+    },
+    "src/third_party/rgb2dvi/SyncAsync.vhd": {
+      "sha256": "5561ac8099ed13f3114e97387aab5f7f30ad28a8be2fc540004cbee3f19eb3a7"
+    },
+    "src/third_party/rgb2dvi/SyncAsyncReset.vhd": {
+      "sha256": "3ce7ade3267959da59b4d448cc6641018e4f0ac3de9f8f998d0b9ff84a3794bc"
+    },
+    "src/third_party/rgb2dvi/TMDS_Encoder.vhd": {
+      "sha256": "b047a257c1172412d1b354a98e3cc77d013d0f3c1af6ff646233abf8b669c196"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "sha256": "861f8e91806f45d19caa15b636087be464119bb3310dbfac8290e2e0648807d8"
+    }
+  }
+}
