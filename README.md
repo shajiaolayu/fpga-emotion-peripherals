@@ -1,8 +1,8 @@
-# OV5640 FPGA 外围工程
+# OV5640 FPGA 工程
 
-面向 Digilent Genesys 2（`xc7k325tffg900-2`）的 OV5640 摄像头采集、图像预处理、帧调度与 HDMI 显示源码。
+基于 Digilent Genesys 2（`xc7k325tffg900-2`）的 OV5640 FPGA 视觉处理工程，提供图像采集、灰度预处理、帧调度与 HDMI 可视化的模块化 RTL 实现。
 
-本仓库公开外围实现和独立测试。完整表情识别系统通过私有 `inference_core` 模块集成；推理引擎、模型权重及其二进制产物不随本仓库分发。
+工程围绕实时预览、手动拍照、冻结显示与结果展示组织功能，并配套板级接线说明、接口文档和可复现的自动化仿真流程。
 
 ## 快速验证
 
@@ -28,7 +28,7 @@ python scripts/audit_release.py
 
 测试在临时目录生成合成图像、软件参考灰度数据和人工分数，结束后自动清理。可以用 `--case roi`、`--case formatter` 等参数单独运行；每个测试默认有 180 秒超时。
 
-## 公开模块
+## 工程模块
 
 | 部分 | 内容 |
 | --- | --- |
@@ -44,11 +44,11 @@ python scripts/audit_release.py
 ## 目录与接口
 
 ```text
-src/rtl/             外围 RTL 与头文件
+src/rtl/             工程 RTL 与头文件
 src/assets/          字体、显示掩码和通用指数查表
 src/constraints/     板级引脚及时间约束参考
 src/third_party/     Digilent rgb2dvi，保留原许可
-sim/                 外围测试、传感器模型与明确标注的核心测试替身
+sim/                 模块测试、传感器模型与核心接口测试替身
 scripts/             测试入口、合成数据生成与发布审计
 docs/                接线、私有核心接口及验证范围
 release-manifest.json 公开文件清单与 SHA-256
@@ -56,10 +56,12 @@ release-manifest.json 公开文件清单与 SHA-256
 
 接线及操作见 [wiring.md](docs/wiring.md)，私有核心的加载、启动和结果契约见 [core-interface.md](docs/core-interface.md)，测试覆盖与边界见 [validation.md](docs/validation.md)。
 
-## 完整系统集成
+## 系统集成与依赖
+
+工程通过 `inference_core` 接口连接识别核心。核心实现、模型权重及其二进制产物不随本仓库分发；完整识别系统的综合与运行需要另外提供获授权的核心。
 
 板级实现参考 Vivado 2019.2，默认系统工作时钟为 120 MHz；部分源码注释中的 50 MHz 是历史描述，集成应以顶层参数和时钟模块为准。`.v` 文件需要按 SystemVerilog 解析，RTL 目录加入 include 路径，所需 `.mem` 需要注册为初始化文件。
 
-外围仿真测试不等于神经网络推理或识别准确率验证。`sim/inference_core_interface_stub.sv` 只检查人工图案的输入顺序并返回人工分数，带有禁止综合的保护，不属于生产硬件源码。仓库不提供完整识别系统的 XPR、构建脚本、bit 或网表；完整综合需要另行提供获授权的私有核心。
+本仓库的仿真覆盖图像采集、预处理、帧调度、显示和接口协议，不评价神经网络识别准确率。`sim/inference_core_interface_stub.sv` 只检查人工图案的输入顺序并返回人工分数，带有禁止综合的保护，不属于生产硬件源码。仓库不提供完整识别系统的 XPR、构建脚本、bit 或网表。
 
 现有版权与第三方许可声明保留，第三方来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本次发布不新增覆盖全部自有源码的许可证；公开可读取不代表对私有核心授予许可。
